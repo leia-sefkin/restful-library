@@ -1,17 +1,15 @@
 # Simple Collections Management Server
 
-## 
+## Installation
 
-Dependencies -
+Prerequisites:
+- NodeJS 0.10
+- MongoDB 2+
+- Bower (nmp install -g bower http://bower.io/)
 
-### Requires Node.js v0.10
-
-### Requires MongoDB 2+ installed
-
-### Install the App
-
- 
  `npm install`
+ 
+ `bower install`
 
 ## Running The App
 
