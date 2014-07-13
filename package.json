@@ -1,0 +1,13 @@
+{
+  "name": "simple-server",
+  "description": "simple server for managing key-value stores",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "~1.4.3",
+    "express": "~4.5.1",
+    "method-override": "~2.0.2",
+    "mongoose": "~3.8.12",
+    "nedb": "~0.10.6",
+    "bower": "^1.3.1",
+  }
+}

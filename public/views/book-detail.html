@@ -1,0 +1,35 @@
+<!--
+
+Book detail modal 
+
+For update/delete of an existing book,
+also used for creating a new one
+
+Difference between dealing with existing or new
+is determined by click event from books.html (which button is clicked)
+and library.js (event is triggered) this sets the newBook 
+var to true (new) or false (existing)
+
+-->
+
+
+<div class='modal-header'>
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <h3 ng-hide='newBook'>Edit Book: {{book.name}}</h3>
+  <h3 ng-show='newBook'>New Book</h3>
+</div>
+<form>
+  <fieldset>
+    <div class='modal-body'>
+      <label>Title</label>
+      <input type='text' ng-model="book.title"/>
+      <label>Author</label>
+      <input type='text' ng-model="book.author"/>
+    </div>
+    <div class='modal-footer'>
+      <button type='submit' class="btn btn-danger" data-dismiss="modal" ng-click="delete()">Delete</button>
+      <button type='submit' class="btn btn-primary" data-dismiss="modal" ng-click="save()">Save</button>
+    </div>
+  </fieldset>
+</form>
+

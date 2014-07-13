@@ -1,0 +1,38 @@
+<!--
+
+Main header for page, 
+
+Scripts pulled in from /public/js/libs
+
+Stylesheets kept under /public/css
+
+App name is library, default view is books.html 
+(list) of all current books
+
+-->
+
+
+<!DOCTYPE html>
+<html ng-app="library">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Library App</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/bootstrap-responsive.min.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+    
+    <script src="/js/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/js/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/libs/angular/angular.min.js"></script>
+    <script src="/js/libs/angular-resource/angular-resource.min.js"></script>
+    <script src="/js/libs/angular-route/angular-route.min.js"></script>
+
+    <script src="/js/library.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Library App for Collection Management</h1>
+    </div>
+    <div ng-view></div>
+  </body>
+</html>
