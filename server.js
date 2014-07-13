@@ -10,6 +10,7 @@ var express = require('express'),
 	methodOverride = require('method-override');
 	
 //setting data store and route options
+//to switch data stores change 'mongo' to 'nedb'
 var env = process.env.NODE_ENV || 'mongo';
 var config = require('./config')[env];
 
