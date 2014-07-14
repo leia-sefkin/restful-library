@@ -101,10 +101,10 @@ module.exports = function(app) {
 	//deleting a book by id
 	app.delete('/v1/books/:book_id', function(req, res) {
 
-		db.remove({ _id : req.params.book_id } , function(err, book) {
+		db.remove({ _id : req.params.book_id } , function(err) {
 			if(err)
 				return res.send(500, err);
-			res.send(book);
+			res.send(req.book);
 		});
 
 	});
