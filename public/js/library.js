@@ -68,7 +68,9 @@ library.controller('BookController', function ($scope, BookService) {
 
 	//save a new book or update one
 	$scope.save = function() {
-		if(!$scope.book._id) {
+		if(!$scope.book.title || !$scope.book.author) {
+			return;
+		} else if(!$scope.book._id) {
 			var newBook = new BookService($scope.book);
 			newBook.$save(function () {
 				$scope.books.push(newBook);
