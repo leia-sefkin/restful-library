@@ -2,7 +2,11 @@
 
 This web application allows for CRUD operations on a library collection (books). 
 
-The library can be configured to hook into two separate data stores - MongoDB or [nedb](https://github.com/louischatriot/nedb). Default is mongo, but can be congigured via NODE_ENV or via /server.js. nedb stores in memory but can be configured for various other options (see nedb docs).
+The library can be configured to hook into two separate data stores - MongoDB or [nedb](https://github.com/louischatriot/nedb). 
+
+Default is mongo, but can be congigured via NODE_ENV or via [server.js](https://github.com/leia-sefkin/restful-library/blob/master/server.js) line 14. 
+ 
+nedb stores in memory but can be configured for various other options (see [nedb docs](https://github.com/louischatriot/nedb/blob/master/README.md)).
 
 The front end is driven by Angular and Bootstrap.
 
