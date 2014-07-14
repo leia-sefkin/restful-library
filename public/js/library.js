@@ -39,7 +39,7 @@ library.factory('BookService', function ($resource) {
 		query: {method:'GET', params:{book_id:''}, isArray:true},
   		post: {method:'POST'},
   		update: {method:'PUT', params: {book_id: '@book_id'}},
-  		remove: {method:'DELETE',params: {book_id: '@book_id'}}
+  		remove: {method:'DELETE', params: {book_id: '@book_id'}}
 	});
 
 });
@@ -82,8 +82,8 @@ library.controller('BookController', function ($scope, BookService) {
 	//remove by id
 	$scope.delete = function() {
     	var item_to_delete = new BookService($scope.book);
-    	item_to_delete.$delete({book_id: $scope.book._id}, function() {
-    		var index = $scope.books.indexOf(item_to_delete);
+    	var index = $scope.books.indexOf($scope.book);
+    	item_to_delete.$delete({book_id: $scope.book._id}, function(book) {
     		$scope.books.splice(index, 1);
     	});
   	};
