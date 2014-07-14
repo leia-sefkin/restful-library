@@ -11,5 +11,6 @@ body {
 }
 
 input[type="search"] {
+	float: right;
 	margin-bottom: 0;
 }
